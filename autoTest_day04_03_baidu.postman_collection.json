@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "ca85d5e5-644e-4289-9a38-d31106474aa9",
+		"name": "接口自动化day04:03实现自动化接口测试",
+		"description": "postman + git + jenkins + newman，实现接口自动化测试的实验。",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "请求百度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7eab0eaf-2090-4562-aed1-8a177d4b4b60",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://www.baidu.com",
+				"description": "简单请求百度"
+			},
+			"response": []
+		}
+	]
+}
